@@ -11,6 +11,8 @@ class MovieCard extends React.Component {
         "https://th.bing.com/th/id/OIP.vEkljgJ1qVoCcf2DRqSRnwHaLH?rs=1&pid=ImgDetMain",
       rating: 8.5,
       star: 0,
+      fav: false,
+      inCart: false,
     };
     this.addStar = this.addStar.bind(this); //if we want to use normal fucntion (not arrow function then we need to bind that function with this to access state) but no need for arrow functions
   }
@@ -23,6 +25,14 @@ class MovieCard extends React.Component {
     console.log("Star added", this.state.star);
   }
 
+  toggleFavorite = () => {
+    this.setState({ fav: !this.state.fav });
+  };
+
+  toggleInCart = () => {
+    this.setState({ inCart: !this.state.inCart });
+  };
+
   //   addStar = () => {
   //     // this.state.star += 1; //this wont re-render the component and hence wont updater on ui
 
@@ -33,7 +43,8 @@ class MovieCard extends React.Component {
   //     console.log("Star added", this.state.star);
   //   };
   render() {
-    const { title, desc, price, poster, rating, star } = this.state;
+    const { title, desc, price, poster, rating, star, fav, inCart } =
+      this.state;
     return (
       <div className="main">
         <div className="left">
@@ -59,9 +70,14 @@ class MovieCard extends React.Component {
             </div>
 
             <div style={{ display: "flex" }}>
-              <button style={{ padding: "5px" }}>Favorite</button>
-              <button style={{ marginLeft: "10px", padding: "5px" }}>
-                Cart
+              <button onClick={this.toggleFavorite} style={{ padding: "5px" }}>
+                {fav ? "UnFavorite" : "Favorite"}
+              </button>
+              <button
+                onClick={this.toggleInCart}
+                style={{ marginLeft: "10px", padding: "5px" }}
+              >
+                {inCart ? "Remove" : "Cart"}
               </button>
             </div>
           </div>
