@@ -12,7 +12,7 @@ class MovieCard extends React.Component {
       rating: 8.5,
       star: 0,
     };
-    this.addStar = this.addStar.bind(this); //if we want to use normal fucntion (not arrow function then we need to bind that function with this to access state)
+    this.addStar = this.addStar.bind(this); //if we want to use normal fucntion (not arrow function then we need to bind that function with this to access state) but no need for arrow functions
   }
 
   addStar() {
