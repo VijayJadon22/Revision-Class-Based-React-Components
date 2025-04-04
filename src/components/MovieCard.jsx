@@ -28,7 +28,10 @@ class MovieCard extends React.Component {
             <div>Rating:{rating}</div>
 
             <div>
-              <span className="btn" onClick={this.addStar}>
+              <span
+                className="btn"
+                onClick={() => this.props.addStar(this.props.index)}
+              >
                 {" "}
                 +{" "}
               </span>
@@ -39,13 +42,13 @@ class MovieCard extends React.Component {
 
             <div style={{ display: "flex" }}>
               <button
-                onClick={this.props.toggleFavorite}
+                onClick={() => this.props.toggleFavorite(this.props.index)}
                 style={{ padding: "5px" }}
               >
                 {fav ? "UnFavorite" : "Favorite"}
               </button>
               <button
-                onClick={this.props.toggleInCart}
+                onClick={() => this.props.toggleInCart(this.props.index)}
                 style={{
                   marginLeft: "10px",
                   padding: "5px",
