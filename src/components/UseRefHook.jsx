@@ -1,26 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 const UseRefHook = () => {
-  const [value, setValue] = useState(0);
-  //   const [count, setCount] = useState(0);
+  const inputRef = useRef();
 
-  //   useEffect(() => {
-  //     setCount((count) => count + 1);
-  //   }, [value]);
+  const btnClicked = () => {
+    console.log(inputRef.current.value);
+    inputRef.current.style.background = "violet";
+    inputRef.current.click();
+  };
 
-  //using useRef
-  const count = useRef(0);
-  console.log(count);
-
-  useEffect(() => {
-    count.current = count.current + 1;
-  });
   return (
     <div>
-      <button onClick={() => setValue((value) => value + 1)}>+1</button>
-      <h1>{value}</h1>
-      <button onClick={() => setValue((value) => value - 1)}>-1</button>
-      <h2>Render Count:{count.current}</h2>
+      <input ref={inputRef} type="text" />
+      <button onClick={btnClicked}>Click Here</button>
     </div>
   );
 };
