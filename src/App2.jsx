@@ -4,6 +4,8 @@ import UseRefHook from "./components/useRefHook";
 import UseMemoHook from "./components/UseMemoHook";
 import LearnUseMemo from "./components/LearnUseMemo";
 import LearnUseCallBackHook from "./components/LearnUseCallBackHook";
+import UseCallBackHook from "./components/useCallBackHook";
+import UseCallBack from "./components/useCallBack";
 
 const App2 = () => {
   return (
@@ -21,7 +23,9 @@ const App2 = () => {
       {/* <UseRefHook /> */}
       {/* <UseMemoHook /> */}
       {/* <LearnUseMemo /> */}
-      <LearnUseCallBackHook />
+      {/* <LearnUseCallBackHook /> */}
+      {/* <UseCallBackHook /> */}
+      <UseCallBack />
     </div>
   );
 };
