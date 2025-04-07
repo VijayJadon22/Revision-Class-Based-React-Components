@@ -2,6 +2,7 @@ import React from "react";
 import HooksUse from "./components/HooksUse";
 import UseRefHook from "./components/useRefHook";
 import UseMemoHook from "./components/UseMemoHook";
+import LearnUseMemo from "./components/LearnUseMemo";
 
 const App2 = () => {
   return (
@@ -12,12 +13,13 @@ const App2 = () => {
         justifyContent: "center",
         alignItems: "center",
         padding: "auto",
-        textAlign:"center"
+        textAlign: "center",
       }}
     >
       {/* <HooksUse /> */}
       {/* <UseRefHook /> */}
-      <UseMemoHook />
+      {/* <UseMemoHook /> */}
+      <LearnUseMemo />
     </div>
   );
 };
