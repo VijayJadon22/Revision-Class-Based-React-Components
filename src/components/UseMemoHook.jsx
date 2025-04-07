@@ -15,11 +15,9 @@ const UseMemoHook = () => {
 
   const result = useMemo(() => {
     console.log("Calculation done");
-
     const cubeNum = (n) => {
       return Math.pow(n, 3);
     };
-
     return cubeNum(number);
   }, [number]);
 
