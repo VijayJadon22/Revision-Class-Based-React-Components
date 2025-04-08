@@ -4,7 +4,7 @@ const UseReducer = () => {
   const initialState = {
     age: 0,
   };
-  const reducer = (state, action) => {
+  const xyz = (state, action) => {
     switch (action.type) {
       case "increase": {
         return { age: state.age + 1 };
@@ -12,16 +12,20 @@ const UseReducer = () => {
       case "decrease": {
         return { age: state.age == 0 ? state.age : state.age - 1 };
       }
+      case "reset": {
+        return { age: 0 };
+      }
       default: {
         return state;
       }
     }
   };
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(xyz, initialState);
   return (
     <div style={{ padding: "10rem" }}>
       <button onClick={() => dispatch({ type: "increase" })}>Increment</button>
       <h1>Age is {state.age}</h1>
+      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
       <button onClick={() => dispatch({ type: "decrease" })}>Decrement</button>
     </div>
   );

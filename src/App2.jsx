@@ -7,6 +7,7 @@ import LearnUseCallBackHook from "./components/LearnUseCallBackHook";
 import UseCallBackHook from "./components/useCallBackHook";
 import UseCallBack from "./components/useCallBack";
 import UseReducer from "./components/useReducer";
+import Todo from "./components/Todo";
 
 const App2 = () => {
   return (
@@ -27,7 +28,8 @@ const App2 = () => {
       {/* <LearnUseCallBackHook /> */}
       {/* <UseCallBackHook /> */}
       {/* <UseCallBack /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      <Todo />
     </div>
   );
 };
