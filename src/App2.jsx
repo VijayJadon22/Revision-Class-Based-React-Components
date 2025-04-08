@@ -6,6 +6,7 @@ import LearnUseMemo from "./components/LearnUseMemo";
 import LearnUseCallBackHook from "./components/LearnUseCallBackHook";
 import UseCallBackHook from "./components/useCallBackHook";
 import UseCallBack from "./components/useCallBack";
+import UseReducer from "./components/useReducer";
 
 const App2 = () => {
   return (
@@ -25,7 +26,8 @@ const App2 = () => {
       {/* <LearnUseMemo /> */}
       {/* <LearnUseCallBackHook /> */}
       {/* <UseCallBackHook /> */}
-      <UseCallBack />
+      {/* <UseCallBack /> */}
+      <UseReducer />
     </div>
   );
 };
