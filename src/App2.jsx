@@ -8,6 +8,8 @@ import UseCallBackHook from "./components/useCallBackHook";
 import UseCallBack from "./components/useCallBack";
 import UseReducer from "./components/useReducer";
 import Todo from "./components/Todo";
+import CustomHook from "./hooks/CustomHook";
+import NotificationSystem from "./components/NotificationSystem";
 
 const App2 = () => {
   return (
@@ -29,7 +31,9 @@ const App2 = () => {
       {/* <UseCallBackHook /> */}
       {/* <UseCallBack /> */}
       {/* <UseReducer /> */}
-      <Todo />
+      {/* <Todo /> */}
+      {/* <CustomHook /> */}
+      <NotificationSystem/>
     </div>
   );
 };
